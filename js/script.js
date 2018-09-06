@@ -1,4 +1,8 @@
+document.getElementById('reg').value.onsubmit = function() {allCheck()}; 
 function allCheck(){
+    nameCheck();
+    emailCheck();
+    phoneCheck();
    var check = true; 
     if (!nameCheck())
         {
@@ -16,9 +20,12 @@ function allCheck(){
         }
     
         console.log(check); 
-        return check; 
+        return false; 
     
     }
+
+
+    
 
 function nameCheck(){
     var getName = document.getElementById('name').value; 

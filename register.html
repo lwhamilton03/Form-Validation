@@ -7,15 +7,19 @@
 
 <body>
     <h1>Register</h1>
-    <div = register>
-    <form onsubmit="return allCheck()" action="signUp.html">
-        <input id="name" style = "display: block; border: black solid 6px"= type="text" placeholder="Input Name..."> 
+    <div id= "registerSheet">
+    <form id = "reg" onsubmit="return truer()" action="signUp.html" value = "submit">
+        Enter Name: 
+        <input id="name" style = "display: block" type="text" placeholder="Input Name..."> 
         <br/>
-        <input id="email" type="text" placeholder="Input Email...">
+        Enter Email:
+        <input id="email" style = "display: block" type="text" placeholder="Input Email...">
         <br/> 
-        <input id="phone" type="text" placeholder="Input Telephone..."> 
+        Enter Mobile Phone Number:  
+        <input id="phone" style = "display: block" text" placeholder="Input Telephone..."> 
         <br/>
-        <input type="submit" style = "background-color: grey; border: black solid 8px" placeholder= "REGISTER">
+        Click to Register: 
+        <input type="submit" style = "display: block; background-color: grey; border: yellowgreen solid 8px" placeholder= "REGISTER">
         <br/> 
     </form>
     </div>
