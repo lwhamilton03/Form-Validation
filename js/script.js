@@ -1,56 +1,73 @@
 function allCheck(){
-    if (nameCheck() && emailCheck() && phoneCheck())
+   var check = true; 
+    if (!nameCheck())
         {
-            return true; 
+            check = false; 
         }
-        return false; 
+        console.log(check);
+
+    if(!emailCheck())
+        {
+            check = false; 
+        }
+    if(!phoneCheck())
+        {
+            check = false; 
+        }
+    
+        console.log(check); 
+        return check; 
+    
     }
 
 function nameCheck(){
-    var getName = document.getElementById('name'); 
-    var check = /^[a-zA-Z]+$/;
+    var getName = document.getElementById('name').value; 
+    var check1 = /^[a-zA-Z]+$/;
     if(getName == ""){
         console.log("Field Is Empty");
         window.alert("The 'NAME' Field Is Empty");
         return false; 
     }
-    if(getName != check)
+    if(!(getName.match(check1)))
         {
             console.log("Invalid Input");
-            window.alert("Invalid Input");
+            window.alert("The 'NAME' Field has an Invalid Input");
             return false; 
         }
+        console.log("Fi");
+    return true;
 }
 
 function emailCheck(){
- var getEmail = document.getElementById('email'); 
-    var check = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}+$/;
+ var getEmail = document.getElementById('email').value; 
+    var check2 = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}+$/;
+    console.log(getEmail);
     if(getEmail == ""){
         console.log("Field Is Empty");
         window.alert("The 'EMAIL' Field Is Empty");
         return false; 
     }
-    if(getEmail != check)
+    if(!(getEmail.match(check2)))
         {
             console.log("Invalid Input");
-            window.alert("Invalid Input");
+            window.alert("The 'EMAIL' Field has an Invalid Input");
             return false; 
         }
 }
 
 function phoneCheck(){
-var getPhone = document.getElementById('phone'); 
-    var check = /^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^50$+$/;
+var getPhone = document.getElementById('phone').value; 
+    var check3 = /^[1-9]{1}$|^[1-4]{1}[0-9]{1}$|^50$+$/;
     if(getPhone == ""){
         console.log("Field Is Empty");
         window.alert("The 'PHONE' Field Is Empty");
         return false; 
     }
 
-    if(getEmail != check)
+    if(!(getPhone.match(check3)))
         {
             console.log("Invalid Input");
-            window.alert("Invalid Input");
+            window.alert("The 'PHONE' Field has an Invalid Input");
             return false; 
         }
 }
