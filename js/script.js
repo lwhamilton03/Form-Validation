@@ -1,4 +1,4 @@
-document.getElementById('reg').value.onsubmit = function() {allCheck()}; 
+//document.getElementById('reg').value.onsubmit = function() {allCheck()}; 
 function allCheck(){
     nameCheck();
     emailCheck();
